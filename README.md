@@ -1,0 +1,2 @@
+# plena-notitia
+Lightweight application
