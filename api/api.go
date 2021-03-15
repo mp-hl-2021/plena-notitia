@@ -14,15 +14,15 @@ func NewRouter() http.Handler {
 	router.HandleFunc("/signin", postSignin).Methods(http.MethodPost)
 
 	router.HandleFunc("/public/{page_id}", getPublicPage).Methods(http.MethodGet)
-	//router.HandleFunc("/public/{page_id}", putPublicPage).Methods(http.MethodPut)
-	//router.HandleFunc("/public/{page_id}", deletePublicPage).Methods(http.MethodDelete)
+	router.HandleFunc("/public/{page_id}", putPublicPage).Methods(http.MethodPut)
+	router.HandleFunc("/public/{page_id}", deletePublicPage).Methods(http.MethodDelete)
 
 	router.HandleFunc("/private/{page_id}", getPrivatePage).Methods(http.MethodGet)
-	//router.HandleFunc("/private/{page_id}", putPrivatePage).Methods(http.MethodPut)
-	//router.HandleFunc("/private/{page_id}", deletePrivatePage).Methods(http.MethodDelete)
+	router.HandleFunc("/private/{page_id}", putPrivatePage).Methods(http.MethodPut)
+	router.HandleFunc("/private/{page_id}", deletePrivatePage).Methods(http.MethodDelete)
 
-	//router.HandleFunc("/public/{page_id}/move", postMovePublicPage).Methods(http.MethodPost)
-	//router.HandleFunc("/private/{page_id}/move", postMovePrivatePage).Methods(http.MethodPost)
+	router.HandleFunc("/public/{page_id}/move", postMovePublicPage).Methods(http.MethodPost)
+	router.HandleFunc("/private/{page_id}/move", postMovePrivatePage).Methods(http.MethodPost)
 
 	return router
 }
@@ -70,4 +70,54 @@ func getPublicPage(w http.ResponseWriter, r *http.Request) {
 // getPrivatePage handles request for private page info.
 func getPrivatePage(w http.ResponseWriter, r *http.Request) {
 	getPage(w, r, false)
+}
+
+// putPage writes page info.
+func putPage(w http.ResponseWriter, r *http.Request, isPublic bool) {
+	w.WriteHeader(http.StatusNotImplemented)
+}
+
+// putPublicPage writes public page info.
+func putPublicPage(w http.ResponseWriter, r *http.Request) {
+	putPage(w, r, true)
+}
+
+// putPrivatePage writes private page info.
+func putPrivatePage(w http.ResponseWriter, r *http.Request) {
+	putPage(w, r, false)
+}
+
+// deletePage deletes page.
+func deletePage(w http.ResponseWriter, r *http.Request, isPublic bool) {
+	w.WriteHeader(http.StatusNotImplemented)
+}
+
+// deletePublicPage deletes public page.
+func deletePublicPage(w http.ResponseWriter, r *http.Request) {
+	deletePage(w, r, true)
+}
+
+// deletePrivatePage deletes private page.
+func deletePrivatePage(w http.ResponseWriter, r *http.Request) {
+	deletePage(w, r, false)
+}
+
+type postMovePageRequestModel struct {
+	IsPublic bool `json:"is-public"`
+	PageId string `json:"page-id"`
+}
+
+// postMovePage moves page to new address.
+func postMovePage(w http.ResponseWriter, r *http.Request, isPublic bool) {
+	w.WriteHeader(http.StatusNotImplemented)
+}
+
+// postMovePublicPage moves public page to new address.
+func postMovePublicPage(w http.ResponseWriter, r *http.Request) {
+	postMovePage(w, r, true)
+}
+
+// postMovePrivatePage moves private page to new address.
+func postMovePrivatePage(w http.ResponseWriter, r *http.Request) {
+	postMovePage(w, r, false)
 }
