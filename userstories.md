@@ -2,34 +2,26 @@
 
 **As** ..., **I want to** ..., **so that** ...
 
-1. **As** a public figure/brand, 
-**I want to** share all my social media links (and more) on one page, 
-**so that** I could increase my audience coverage.
+1. **As** an user,
+**I want to** share music playlists platform-independetly,
+**So that** all my friends can easily listen to it
 
-2. **As** a professional, 
-**I want to** share my social media links, bio, CV and more, 
-**so that** I could be easily recruited by companies.
+2. **As** an user,
+**I want to** view pages that were shared to me,
+**So that** I can listen to the music present on these pages
 
-3. **As** an user, 
-**I want to** view other people's link pages, 
-**so that** I can follow them on social media platforms & more.
+3. **As** an user,
+**I want to** be able to authentificate,
+**So that** I can have a profile associated with playlists I share
 
-4. **As** an user, 
-**I want to** create my own link page without going through registration process, 
-**so that** I can immediately share my social media links.
+4. **As** an authentificated user,
+**I want to** be able to edit / delete my playlist pages,
+**So that** there is no need to generate new page for every small adjustment in a playlist
 
-5. **As** an user,
-**I want to** be able to edit my previously created links page without going through registration process(using cookies),
-**so that** I can use website functionality without registration unless it's neccesary.
+5. **As** an authentificated user,
+**I want to** have a profile with a list of my favorite playlists,
+**So that** my friends can "follow" me and see new playlists I create
 
 6. **As** an user,
-**I want to** be able to sign up,
-**so that** I can edit my link pages anytime from any device.
-
-7. **As** an authenticated user,
-**I want to** be able to manage my link pages (including editing, deleting and creating them).
-
-8. **As** an authenticated user,
-**I want to** create link pages with arbitrary urls and have access to diverse variety of advanced customisation tools,
-**so that** I can have more control over my links web page appearance.
-
+**I want to** be able to create playlists anonimously,
+**So that** I can use the service simpler and with more privacy
